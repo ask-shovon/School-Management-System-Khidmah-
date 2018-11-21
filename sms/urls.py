@@ -23,10 +23,9 @@ from django.conf import settings
 from .views import home
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('school/',include('Account.urls')),
-    path('academic/',include('academic.urls')),
+    path('school/', include('Account.urls')),
+    path('academic/', include('academic.urls')),
     path('', home, name='home'),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)# use for static file to show css
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # use for static file to show css

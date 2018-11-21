@@ -36,4 +36,4 @@ class Subject(models.Model):
     subject_class = models.ForeignKey(StudentClass, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.subject_name
+        return self.subject_name 
