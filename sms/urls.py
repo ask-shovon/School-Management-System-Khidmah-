@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
 # use for static file to show css
 from django.conf.urls.static import static
-# use for static file to show css
 from django.conf import settings
 
 from .views import home
