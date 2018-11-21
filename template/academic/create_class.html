@@ -1,0 +1,15 @@
+{% extends 'base_auth.html' %}
+{% block container %}
+<div class="container col-md-6">
+    <h2>Create Class</h2>
+    <!--{% if msg %}-->
+        <!--<p class="text-danger">{{ msg }}</p>-->
+    <!--{% endif %}-->
+
+<form action="" method="POST" class="form-horizontal">
+    {% csrf_token %}
+    {{ forms.as_p }}
+    <input type="submit" value="submit" class="btn btn-success" />
+</form>
+    </div>
+{% endblock %}
