@@ -7,8 +7,8 @@ def password_checker(value):
 
 class UserResgisterForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={'class':'forms.control'}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'forms.control'})
-                               ,validators=[password_checker])
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'forms.control'}),
+                               validators=[password_checker])
     re_password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'forms.control'}))
 
     def clean(self):
