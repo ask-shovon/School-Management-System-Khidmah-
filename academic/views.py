@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 from .models import StudentClass
 from .forms import CreateClassForm
 
 
 # Create your views here.
+# use the decorator so that we can get permission for dashbaord otherwise anyone can access
+@login_required()
 def dashboard(request):
     return render(request, 'academic/dashboard.html')
 

@@ -14,7 +14,7 @@ def registration(request):
             password = forms.cleaned_data["password"]
 
             try:
-                # it dyamically use all sort of permission
+                # it dynamically use all sort of permission
                 User.objects.create_user(username=username, password=password)
 
                 return redirect('user-login')
@@ -48,7 +48,7 @@ def user_login(request):
             #it is a build in function
             if user:
                 login(request, user)
-                return HttpResponse("log in success")
+                return redirect('dashboard')
             else:
                 errmsg = "user name or password doesn't match"
                 context = {

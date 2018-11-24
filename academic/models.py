@@ -20,11 +20,8 @@ class SchoolInfo(models.Model):
 
 # student class model
 class StudentClass(models.Model):
-    class_name = models.CharField(max_length=50)
-    class_no = models.IntegerField()
-
-    class Meta:
-        unique_together = ('class_name', 'class_no')
+    class_name = models.CharField(max_length=50, unique=True)
+    class_no = models.IntegerField(unique=True)
 
     def __str__(self):
         return self.class_name
